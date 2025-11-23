@@ -1,0 +1,116 @@
+.dashboard {
+    display: flex;
+    height: 100vh;
+}
+
+.main-content {
+    flex: 1;
+    padding: 40px;
+    padding-left: 310px;
+    background-color: #f8f9fa;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    position: relative;
+}
+
+.main-content h1 {
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.cards-container {
+    position: fixed;
+    top: 35px;
+    left: 290px;
+    right: 20px;
+    height: 85vh;
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto repeat(2, 1fr);
+    gap: 15px;
+    z-index: 999;
+}
+
+.header-with-install {
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.cards-container h1 {
+    color: #333;
+    margin: 0;
+    font-size: 2.2em;
+}
+
+.install-btn {
+    background: #28a745;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    transition: background-color 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.install-btn:hover {
+    background: #218838;
+}
+
+
+
+.education-card {
+    background: white;
+    border: 1px solid #e0e0e0;
+    border-radius: 16px;
+    padding: 28px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.education-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #fb923c, #ea580c);
+}
+
+.education-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    background: white;
+}
+
+.education-card h3 {
+    color: #fb923c;
+    margin-bottom: 16px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.education-card p {
+    color: #555;
+    font-size: 15px;
+    line-height: 1.6;
+    margin: 0;
+}

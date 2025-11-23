@@ -1,0 +1,277 @@
+.farming-container {
+    display: flex;
+    height: 100vh;
+    background-color: #fafafa;
+}
+
+.farming-left {
+    width: 40%;
+    padding: 2rem;
+    background: transparent;
+}
+
+.farming-right {
+    width: 60%;
+    padding: 2rem;
+    overflow-y: auto;
+}
+
+.farming-header {
+    margin-bottom: 2rem;
+}
+
+.farming-header h2 {
+    color: #333;
+    font-size: 1.8rem;
+    margin: 1rem 0 0.5rem 0;
+}
+
+.farming-header p {
+    color: #16a34a;
+    font-size: 1rem;
+    margin: 0;
+    font-weight: 500;
+}
+
+.back-button {
+    background: #16a34a;
+    border: none;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.back-button:hover {
+    background: #15803d;
+    transform: translateY(-2px);
+}
+
+.farming-form {
+    background: transparent;
+    padding: 0;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+    font-size: 1rem;
+    color: #333;
+}
+
+.input-with-mic {
+    display: flex;
+    gap: 0.75rem;
+    align-items: center;
+}
+
+.form-group input, .form-group select {
+    flex: 1;
+    padding: 1rem;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 1rem;
+    background: white;
+    color: #333;
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus, .form-group select:focus {
+    outline: none;
+    border-color: #16a34a;
+    box-shadow: 0 0 0 3px rgba(22, 163, 74, 0.1);
+}
+
+.mic-button {
+    background: #16a34a;
+    border: none;
+    color: white;
+    padding: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.mic-button:hover {
+    background: #15803d;
+}
+
+.mic-button.listening {
+    background: #dc2626;
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% { opacity: 1; }
+    50% { opacity: 0.7; }
+    100% { opacity: 1; }
+}
+
+.generate-button {
+    background: #16a34a;
+    border: none;
+    color: white;
+    padding: 1.25rem 2rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    width: 100%;
+    transition: all 0.3s ease;
+}
+
+.generate-button:hover:not(:disabled) {
+    background: #15803d;
+    transform: translateY(-2px);
+}
+
+.generate-button:disabled {
+    background: #9ca3af;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.advisory-result {
+    background: rgba(22, 163, 74, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(22, 163, 74, 0.2);
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(22, 163, 74, 0.15);
+}
+
+.result-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid rgba(22, 163, 74, 0.3);
+}
+
+.result-header h3 {
+    color: #16a34a;
+    font-size: 1.5rem;
+    margin: 0;
+    font-weight: 700;
+}
+
+.audio-controls {
+    display: flex;
+    gap: 0.75rem;
+    align-items: center;
+}
+
+.speak-btn {
+    background: #2563eb;
+    border: none;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.speak-btn:hover {
+    background: #1d4ed8;
+    transform: translateY(-2px);
+}
+
+.stop-btn {
+    background: #dc2626;
+    border: none;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.stop-btn:hover {
+    background: #b91c1c;
+    transform: translateY(-2px);
+}
+
+.advisory-content {
+    line-height: 1.8;
+    margin-bottom: 2rem;
+}
+
+.task-header {
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: #16a34a;
+    margin: 1.5rem 0 0.75rem 0;
+    padding: 0.75rem;
+    background: rgba(22, 163, 74, 0.1);
+    border-left: 4px solid #16a34a;
+    border-radius: 4px;
+}
+
+.time-info {
+    font-weight: 600;
+    color: #dc2626;
+    margin: 0.75rem 0;
+    padding: 0.5rem;
+    background: rgba(220, 38, 38, 0.1);
+    border-radius: 4px;
+}
+
+.content-line {
+    margin: 0.5rem 0;
+    padding-left: 1rem;
+    color: #374151;
+}
+
+.weather-info {
+    background: rgba(59, 130, 246, 0.1);
+    border: 1px solid rgba(59, 130, 246, 0.2);
+    border-radius: 12px;
+    padding: 1rem;
+    margin-top: 1.5rem;
+}
+
+.weather-info p {
+    margin: 0.5rem 0;
+    color: #1e40af;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+@media (max-width: 768px) {
+    .farming-container {
+        flex-direction: column;
+        height: auto;
+    }
+    
+    .farming-left, .farming-right {
+        width: 100%;
+    }
+    
+    .input-with-mic {
+        flex-direction: column;
+    }
+    
+    .mic-button {
+        align-self: center;
+    }
+}

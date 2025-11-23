@@ -1,0 +1,458 @@
+.finance-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.finance-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    gap: 20px;
+}
+
+.back-button {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.back-button:hover {
+    background: #0056b3;
+}
+
+.finance-header h1 {
+    color: #2c3e50;
+    margin: 0;
+    font-size: 2.2em;
+}
+
+.finance-form {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 600;
+    color: #34495e;
+    font-size: 16px;
+}
+
+.topic-buttons {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.topic-btn {
+    background: #f8f9fa;
+    border: 2px solid #e9ecef;
+    padding: 12px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-size: 14px;
+    text-align: center;
+}
+
+.topic-btn:hover {
+    background: #e9ecef;
+    border-color: #007bff;
+}
+
+.topic-btn.active {
+    background: #007bff;
+    color: white;
+    border-color: #007bff;
+}
+
+.input-group {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.topic-input {
+    flex: 1;
+    padding: 12px;
+    border: 2px solid #e9ecef;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.topic-input:focus {
+    outline: none;
+    border-color: #007bff;
+}
+
+.voice-btn {
+    background: #28a745;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    white-space: nowrap;
+    transition: background-color 0.3s;
+}
+
+.voice-btn:hover {
+    background: #218838;
+}
+
+.voice-btn.listening {
+    background: #dc3545;
+    animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+    0% { opacity: 1; }
+    50% { opacity: 0.7; }
+    100% { opacity: 1; }
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.amount-input, .duration-input {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #e9ecef;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.amount-input:focus, .duration-input:focus {
+    outline: none;
+    border-color: #007bff;
+}
+
+select {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #e9ecef;
+    border-radius: 8px;
+    font-size: 16px;
+    background: white;
+}
+
+select:focus {
+    outline: none;
+    border-color: #007bff;
+}
+
+.submit-btn {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 600;
+    width: 100%;
+    transition: background-color 0.3s;
+}
+
+.submit-btn:hover:not(:disabled) {
+    background: #0056b3;
+}
+
+.submit-btn:disabled {
+    background: #6c757d;
+    cursor: not-allowed;
+}
+
+.guidance-result {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.result-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #e9ecef;
+}
+
+.result-header h3 {
+    color: #2c3e50;
+    margin: 0;
+    font-size: 1.5em;
+}
+
+.audio-btn {
+    background: #17a2b8;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+.audio-btn:hover {
+    background: #138496;
+}
+
+.guidance-content {
+    line-height: 1.8;
+    color: #495057;
+}
+
+.guidance-content p {
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+.guidance-content p:empty {
+    margin-bottom: 5px;
+}
+
+/* Budget Calculator Specific Styles */
+.budget-form {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+.income-section {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #e9ecef;
+}
+
+.income-input {
+    width: 100%;
+    padding: 15px;
+    border: 2px solid #e9ecef;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.income-input:focus {
+    outline: none;
+    border-color: #007bff;
+}
+
+.budget-allocation h3 {
+    color: #2c3e50;
+    margin-bottom: 20px;
+    font-size: 1.3em;
+}
+
+.budget-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.budget-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    border: 1px solid #e9ecef;
+}
+
+.budget-item label {
+    font-weight: 600;
+    color: #495057;
+    margin: 0;
+    flex: 1;
+}
+
+.amount-input-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.budget-amount-input {
+    width: 120px;
+    padding: 8px 12px;
+    border: 1px solid #ced4da;
+    border-radius: 6px;
+    text-align: right;
+    font-weight: 600;
+}
+
+.budget-amount-input:focus {
+    outline: none;
+    border-color: #007bff;
+}
+
+.percentage {
+    font-size: 14px;
+    color: #6c757d;
+    font-weight: 600;
+    min-width: 50px;
+}
+
+.budget-summary {
+    background: #e9ecef;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.summary-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.summary-item:last-child {
+    margin-bottom: 0;
+    font-size: 18px;
+    padding-top: 10px;
+    border-top: 2px solid #ced4da;
+}
+
+.summary-item.positive {
+    color: #28a745;
+}
+
+.summary-item.negative {
+    color: #dc3545;
+}
+
+.analyze-btn {
+    background: #28a745;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    width: 100%;
+    transition: background-color 0.3s;
+}
+
+.analyze-btn:hover:not(:disabled) {
+    background: #218838;
+}
+
+.analyze-btn:disabled {
+    background: #6c757d;
+    cursor: not-allowed;
+}
+
+.charts-section {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+.chart-container {
+    margin-bottom: 40px;
+}
+
+.chart-container:last-child {
+    margin-bottom: 0;
+}
+
+.chart-container h3 {
+    color: #2c3e50;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .finance-container {
+        padding: 15px;
+    }
+    
+    .finance-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+    
+    .finance-header h1 {
+        font-size: 1.8em;
+    }
+    
+    .finance-form, .budget-form {
+        padding: 20px;
+    }
+    
+    .topic-buttons {
+        grid-template-columns: 1fr;
+    }
+    
+    .form-row, .income-section {
+        grid-template-columns: 1fr;
+    }
+    
+    .input-group {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .result-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+    
+    .budget-items {
+        grid-template-columns: 1fr;
+    }
+    
+    .budget-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    
+    .amount-input-group {
+        width: 100%;
+        justify-content: space-between;
+    }
+    
+    .budget-amount-input {
+        width: 100px;
+    }
+}
